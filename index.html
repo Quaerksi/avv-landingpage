@@ -4,11 +4,15 @@
     <title>Landing Page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <!-- web font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    
     <!-- bootstrap -->
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,20 +25,27 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+
     <!-- bootstrap font awesome -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
+    <!-- fade in effects -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- my styleshee -->
-    <link rel="stylesheet" href="sass/project.css" />
-    <!-- slider tyni slider -->
+
+    <!-- tiny slider -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
     />
+
+    <!-- my stylesheet -->
+    <link rel="stylesheet" href="sass/project.css" />
+    <!-- slider tyni slider -->
+
   </head>
   <body>
     <!-- Write your comments here -->
@@ -98,11 +109,11 @@
     <main>
       <!-- container 1 start -->
       <div
-        class="custom_container background_img_pos font_family_bebas container_1_background_img flex center_flex"
+        class="container_1"
       >
         <div class="container_1_inside">
-          <h1 class="font_weis container_1_header">ALLES </br> ANDERE</br> IS KÄSE.</h1>
-          <h3 class="font_gelb container_1_footer">
+          <h1 class="container_1_header">ALLES </br> ANDERE</br> IS KÄSE.</h1>
+          <h3 class="container_1_footer">
             OHNE UMSTIEG MIT ARRIVA NACH MAASTRICH.
           </h3>
         </div>
@@ -110,13 +121,13 @@
       <!-- container 2 video start -->
         
       <!-- container 3 start -->
-      <div class="custom_container container_3 flex center_flex font_magenta">
-        <div class="container_3_inside">
+      <div class="container_3 flex">
+        <div class="container_large_inside">
           <!-- Rakete fehlt -->
           <div>
-            <img class="container_3_icon" src="./assets/img/icons/zauberstab-icon.svg" height:/>
+            <img class="container_large_icon" src="./assets/img/icons/zauberstab-icon.svg" height:/>
 
-            <h1 class="container_3_header font_family_bebas">SCHNELLER IN DIE NIEDERLANDE</h1>
+            <h1 class="container_large_header">SCHNELLER IN DIE NIEDERLANDE</h1>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut.
@@ -131,12 +142,13 @@
         </div>
       </div>
       <!-- container 4 start -->
-      <div class="custom_container container_4 flex center_flex font_magenta">
-        <div class="container_3_inside">
+      <div class="container_4 flex">
+        <div></div>
+        <div class="container_large_inside">
           <!-- Rakete fehlt -->
           <div>
-            <img class="container_3_icon" src="./assets/img/icons/automat-icon.svg" />
-            <h1 class="container_3_header font_family_bebas font_magenta">
+            <img class="container_large_icon" src="./assets/img/icons/automat-icon.svg" />
+            <h1 class="container_4_header">
               Tickets am Automaten
             </h1>
             <p>
@@ -165,13 +177,14 @@
             </p>
           </div>
         </div>
+        <img class="container_4_background_image" src="./assets/img/ticketautomat.svg">
       </div>
       <!-- container 5 start -->
-      <div class="custom_container container_5 font_weis">
-        <div class="container_3_inside" style="border: 2px solid green; margin: 0 auto; padding-top: 3rem">
+      <div class="container_5">
+        <div class="container_large_inside">
           <!-- <div> -->
-            <img class="container_3_icon" src="./assets/img/icons/fahrzeug-tacho.svg" />
-            <h1 class="container_3_header">Tickets am Automaten</h1>
+            <img class="container_large_icon" src="./assets/img/icons/fahrzeug-tacho.svg" />
+            <h1 class="container_large_header">Tickets am Automaten</h1>
             <p>
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut. labore et dolore magna aliquyam
@@ -180,29 +193,30 @@
               sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
               amet, consetetur sadipscing elitr.
             </p>
-          </div>
-        <!-- </div> -->
-        <div
-          data-aos="fade-down-right"
-          class="double_picture double_picture_1 custom_container_img"
-        >
-          <p class="double_picture_note">
-            <span class="double_picture_note_span">127</span><br />
-            &nbsp;&nbsp;&nbsp;Steckdosen
-          </p>
         </div>
-        <div
-          data-aos="flip-left"
-          class="double_picture double_picture_2 custom_container_img"
-        >
-          <p class="double_picture_note">
-            <span class="double_picture_note_span">160</span>km/h<br />
-            &nbsp;&nbsp;&nbsp;max. Geschwindigkeit
-          </p>
+        <div>
+            <div
+              data-aos="fade-down-right"
+              class="double_picture double_picture_1 custom_container_img"
+            >
+              <p class="double_picture_note">
+                <span class="double_picture_note_span">127</span><br />
+                &nbsp;&nbsp;&nbsp;Steckdosen
+              </p>
+            </div>
+            <div
+              data-aos="flip-left"
+              class="double_picture double_picture_2 custom_container_img"
+            >
+              <p class="double_picture_note">
+                <span class="double_picture_note_span">160</span>km/h<br />
+                &nbsp;&nbsp;&nbsp;max. Geschwindigkeit
+              </p>
+            </div>
         </div>
       </div>
       <!-- container 6 -->
-      <div class="custom_container custom_container_img container_6">
+      <div class="container_6">
         <div
           id="carouselExampleFade"
           class="custom_carousel carousel slide carousel-fade custom_slider mystyle"
@@ -210,71 +224,15 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <!-- <div class="slider_inside"> -->
-              <div class="container_4_inside slider_inside">
-                <div class="container_4_inside_text font_weis">
-                  <img
-                    class="img_test"
-                    src="./assets/img/icons/fahrzeug-tacho.svg"
-                  />
-                  <h1 class="container_2_header">Tickets am Automaten</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut. labore et dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et
-                    accusam et justo duo dolores et ea rebum. Stet clita kasd
-                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                    amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                    elitr.
-                  </p>
-                </div>
-                <!-- </div> -->
-              </div>
+              Halllooooo 1
             </div>
             <div class="carousel-item">
               <div class="inCarousel">
-                <!-- <div class="slider_inside"> -->
-                <div class="container_4_inside slider_inside">
-                  <div class="container_4_inside_text font_weis">
-                    <img
-                      class="img_test"
-                      src="./assets/img/icons/fahrzeug-tacho.svg"
-                    />
-                    <h1 class="container_2_header">Tickets 2</h1>
-                    <p>
-                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                      sed diam nonumy eirmod tempor invidunt ut. labore et
-                      dolore magna aliquyam erat, sed diam voluptua. At vero eos
-                      et accusam et justo duo dolores et ea rebum. Stet clita
-                      kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                      dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-                      sadipscing elitr.
-                    </p>
-                  </div>
-                  <!-- </div> -->
-                </div>
+                Halllooooo 2
               </div>
             </div>
             <div class="carousel-item">
-              <!-- <div class="slider_inside"> -->
-              <div class="container_4_inside slider_inside">
-                <div class="container_4_inside_text font_weis">
-                  <img
-                    class="img_test"
-                    src="./assets/img/icons/fahrzeug-tacho.svg"
-                  />
-                  <h1 class="container_2_header">Tickets 3</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut. labore et dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et
-                    accusam et justo duo dolores et ea rebum. Stet clita kasd
-                    gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-                    amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-                    elitr.
-                  </p>
-                </div>
-                <!-- </div> -->
-              </div>
+              Halllooooo 3
             </div>
           </div>
           <button
@@ -297,7 +255,8 @@
           </button>
         </div>
       </div>
-      <div class="custom_container custom_container_img container_6">
+      <!-- container 7 -->
+      <div class="container_7">
         <div id="carouselExampleCaptions" class="carousel slide mystyle">
           <div class="carousel-indicators">
             <button
@@ -323,7 +282,7 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <H1>HALLO DU</H2>
+              <H1>HALLO 1</H2>
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -332,7 +291,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <H1>HALLO DU 3</H2>
+              <H1>HALLO DU 2</H2>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -341,7 +300,7 @@
               </div>
             </div>
             <div class="carousel-item">
-              <H1>HALLO DU 4/H2>
+              <H1>HALLO DU 3</H1>
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -370,30 +329,11 @@
           </button>
         </div>
       </div>
-      <div class="custom_container container_7">
-        <h1 class="container_2_header font_magenta">
-          Tickets am Automaten
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut. labore et dolore magna aliquyam
-          erat, sed diam voluptua. At vero eos et accusam et justo duo
-          dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-          sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-          amet, consetetur sadipscing elitr.
-        </p>
-        <p>
-          <b>Lorem</b> ipsum dolor sit amet, consetetur sadipscing elitr,
-          sed diam nonumy eirmod tempor invidunt ut. labore et dolore magna
-          aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-          duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-          sit amet, consetetur sadipscing elitr.
-        </p>
-      </div>
-      <!-- <div class="custom_container container_8"></div> -->
+      <!-- container 8 -->
+      <div class="container_8"></div>
     </main>
-    <footer class="flex footer">
+    <!-- Footer -->
+    <footer class="footer">
       <div class="footer_item">
         <p>Social Media</p>
         <div class="flex social_icons">
@@ -416,7 +356,7 @@
       </div>
       <div class="footer_item">
         <p>Lorem Ipsum</p>
-        <div class="flex space-between">
+        <div>
           <img
             class="margin_right"
             src="./assets//img/logos/google_play_logo.svg"

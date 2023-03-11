@@ -4,8 +4,8 @@
   "description": "css, html, javascript, bootstrap, sass, webfonts",
   "main": "index.html",
   "dependencies": {
+    "bootstrap": "^5.2.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
