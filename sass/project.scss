@@ -1,6 +1,7 @@
 // @import "components/font-face";
-
+// @import "./_variables";''
 @import "../node_modules/bootstrap/scss/bootstrap";
+
 
 
 // vendor & variables
@@ -69,7 +70,7 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
 // basics
 
 body{
-    min-width: 400px
+    min-width: 450px;
 }
 
 .center{
@@ -155,32 +156,77 @@ body{
 
 .container_5{
     @extend .container_basic;
+    max-height: 100vh;
     flex-direction: column;
     justify-content: start;
     background-color: $color_magenta;
+    color: $color_white;
+    position: relative;
+    overflow: hidden;
 
     .container_large_inside{
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 }
 
+.container_5::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border-radius: 50%;
+    opacity: 20%;
+    background-color: $color_white;
+    margin-top: 56vh;
+    margin-left: 73vw;
+}
+
 .container_6{
-    // @extend .container_basic;
+    @extend .container_basic;
+    position: relative;
+    z-index: 10;
+    color: $color_white;
     background-image: url("../assets/img/maas.jpg");
 }
 .container_7{
     @extend .container_basic;
+    color: $color_white;
     background-image: url("../assets/img/stadtrundgaenge.jpg");
+
+    p{
+        a{
+            color: $color_white;
+            border-bottom: none;
+        }
+    }
 }
 .container_8{
     @extend .container_basic;
-    background-color: $color_blue;
+    background-color: $color_blue;  
+    color: $color_white;
+    text-align: center;
 }
 
 /**********double picture ************************/
+
+.bullet_points{
+    min-width: 1000px;
+    max-height: 60vh;
+}
+
 .double_picture{
+    display: inline-block;
+    color: $color_white;
     width: 150px;
     height: 150px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    p{
+        line-height: 30px;
+    }
 }
 
 .double_picture_note{
@@ -190,51 +236,278 @@ body{
 }
 
 .double_picture_note_span{
-    font-size: 90px;
-}
-
-.double_picture_img{
-    width: 100px;
-    height: 100px;
-    z-index:3;
+    font-size: 120px;
+    font-weight: 700;
+    letter-spacing: -7px;
 }
 
 .double_picture_1{
+
+    @extend .double_picture;
     background-image: url('../assets/img/icons/fahrzeug-steckdose.svg');
-    position: relative;
     top: 30px;
-    left: 50px;
+    left: 80px; 
+
+    p{
+        position: relative;
+        top: 27px;
+        right:20px;
+    }
 }
 
 .double_picture_2{
-    position: relative;
-    top: 30px;
-    left: 300px;
+    @extend .double_picture;
+    top: 150px;
+    left: 180px;
     width: 300px;
 }
 
 .double_picture_2::after{
-    content: "";
-    background: url('../img/icons/fahrzeug-tacho.svg');
-    opacity: 0.5;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
+    content: '';
+    background-image: url('../assets/img/icons/fahrzeug-tacho.svg');
+    background-repeat: no-repeat;
     background-size: contain;
-   background-repeat: no-repeat;
-
+    opacity: 50%;
+    display: block;
+    width: 110px;
+    height: 110px;
+    z-index: 30;
+    top: 0px;
+    bottom: 0;
+    right: 50px;
+    position: absolute;
 }
 
-//slider
-.slider_inside{
-    margin: 20vh 0 0 10vw;
-    width: 500px;
+.double_picture_3{
+    @extend .double_picture;
+    top: -150px;
+    left: 700px;
+    width: 300px;
+    display: flex;
+
+    img{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        top: 18px;
+        right: 10px;
+    }
 }
 
-.mystyle{
+.double_picture_4{
+    @extend .double_picture;
+    top: 25px;
+    left: 120px;
+}
+
+.double_picture_4::after{
+    content: '';
+    background-image: url('../assets/img/icons/fahrzeug-klima.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 50%;
+    display: block;
+    width: 300px;
+    height: 150px;
+    z-index: 30;
+    top: 45px;
+    bottom: 0;
+    right: -150px;
+    position: absolute;
+}
+
+.double_picture_5{
+    @extend .double_picture;
+    top: -130px;
+    left: 450px;
+    width: 300px;
+    display: flex;
+
+    img{
+        width: 100px;
+        height: 200px;
+        padding-left: .5rem;
+    }
+
+    p{
+        padding-top: 5.7rem;
+
+        .seats{
+            padding-left: 4.7rem;
+        }
+    }
+}
+
+.double_picture_6{
+    @extend .double_picture;
+    top: -360px;
+    left: 760px;
+    display: inline-block;
+
+    .double_picture_note_span{
+        font-size: 90px;
+    }
+
+    .text{
+        position: relative;
+        left: 55px;
+        top: -90px;
+    }
+}
+
+.double_picture_6::after{
+    content: '';
+    background-image: url('../assets/img/icons/fahrzeug-tuer.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 50%;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    top: -25px;
+    right: 85px;
+    position: absolute;
+}
+
+@include media-breakpoint-down(lg){
+
+    .container_5{
+        max-height: 130vh;
+    }
+
+    .container_5::before{
+        margin-top: 68vh;
+        margin-left: 80vw;
+    }
+
+    .bullet_points{
+        min-width: 576px;
+    }
+
+    .double_picture_1{
+        left: 0;
+        top: 0px;
+    }
+
+    .double_picture_2{
+        left: -110px;
+        top: 207px;
+    }
+
+    .double_picture_3{
+        left: 300px;
+        top: -129px;
+    }
+
+    .double_picture_4{
+        left: 0;
+        top: 70px;
+    }
+
+    .double_picture_5{
+        left: 300px;
+        top: -125px;
+    }
+
+    .double_picture_6{
+        left: 407px;
+        top: -384px;
+    }
+}
+
+@include media-breakpoint-down(sm){
+
+    .container_5{
+        max-height: 149vh;
+    }
+
+    .container_5::before{
+        height: 600px;
+        width: 600px;
+        margin-top: 119vh;
+        margin-left: 76vw;
+    }
+
+    .bullet_points{
+        min-width: 300px;
+        min-height: 1080px;
+    }
+
+    .double_picture_1{
+        left: 136px;
+        top: 11px;
+    }
+
+    .double_picture_2{
+        left: -61px;
+        top: 207px;
+    }
+
+    .double_picture_3{
+        left: 114px;
+        top: 198px;
+    }
+
+    .double_picture_4{
+        left: 117px;
+        top: 192px;
+    }
+
+    .double_picture_5{
+        left: 79px;
+        top: 217px;
+    }
+
+    .double_picture_6{
+        left: 1179px;
+        top: 343px;
+    }
+}
+
+// slider
+
+.my_slyder_style{
+    position: relative;
+    top: 50%;
+    width: 900vw;
     height: 100vh !important;
+}
+
+.carousel-inner, 
+.carousel-item{
+    height: 100%;
+}
+
+.my_slider_inside{
+    margin-left:10vw;
+    max-width: 500px;
+    position: relative;
+    top: 30%;
+}
+
+.my_slider_inside_left{
+    max-width: 400px;
+    position: relative;
+    top: 30%;
+    left: 50vw;
+}
+
+
+@include media-breakpoint-down(lg){
+    
+    .my_slider_inside,
+    .my_slider_inside_left{
+        top: 25%;
+        margin: 0 auto;
+        max-width: 350px;
+        left: 0;
+    }
+}
+@include media-breakpoint-up(xxl){
+
+    .my_slider_inside_left{
+        left: 61vw;
+    }
 }
 
 // footer
