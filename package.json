@@ -1,0 +1,14 @@
+{
+  "name": "heimrichandhannot",
+  "version": "1.0.0",
+  "description": "css, html, javascript, bootstrap, sass, webfonts",
+  "main": "index.html",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "juliette",
+  "license": "UNLICENSED"
+}

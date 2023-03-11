@@ -1,0 +1,228 @@
+// vendor & variables
+$weiss-color: rgb(255,255,255);
+$gelb-color: rgb(255, 239, 0);
+$magenta-color: rgb(183, 0, 115);
+$blau: rgb(94, 119, 182);
+$schwarz: rgb(67, 67, 67);
+
+$width-inside: 800px;
+
+// mixins
+
+// regions
+
+// components
+@import "components/font-face";
+
+// pages
+.font_weis{
+    color: $weiss-color;
+}
+
+.font_gelb{
+    color: $gelb-color;
+}
+
+.font_magenta{
+    color: $magenta-color;
+}
+
+.font_blau{
+    color: $blau;
+}
+
+.font_schwarz{
+    color: $schwarz;
+}
+
+.flex{
+    display: flex;
+}
+
+.center_flex{
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    margin: 0 auto;
+}
+
+.scale{
+    display: inline-block;
+    transform: scale(1, 1.5);
+}
+
+.custom-nav{
+    width: 100vw;
+    padding-inline: 1rem;
+}
+
+body{
+     max-width: 300px
+}
+
+//main
+.header{
+    width: 100vw !important;
+}
+
+.custom_container{
+ height: 100vh;
+ min-width: 100vw;
+} 
+
+// wird ein mixin
+.custom_container_img{
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.container_1{
+   background-image: url("../img/header.jpg");
+}
+
+.container_1_inside{
+    width: 400px;
+    display: inline-block;
+}
+
+.container_1_header{
+    font-weight: 900;
+    font-size: 6.2rem;
+    justify-content: space-between;
+}
+
+.container_2{
+    background-color: rgb(255,255,255);
+    flex-direction: column;
+}
+
+.container_2_inside{
+    width: $width-inside;
+    text-align: center;
+}
+
+.scale>*{
+    margin-bottom: 2rem;
+    
+}
+
+.img_test{
+    position: relative;
+    height: 80px;
+}
+
+.container_2_header{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.container_3{
+    background-color: grayscale($color: #e0d6d6);
+    height: 1000px;
+}
+
+.container_4{
+    background-color: $magenta-color;
+}
+
+.container_4_inside{
+    text-align: center;
+    width:$width-inside;
+    margin: 0 auto;
+}
+
+
+.container_5{
+    background-image: url("../img/maas.jpg");
+}
+.container_6{
+    background-image: url("../img/stadtrundgaenge.jpg");
+}
+.container_7{
+    background-color: $blau;
+}
+// .container_8{
+//     background-color: rgb(255,255,255);
+// }
+
+/**********double picture ************************/
+.double_picture{
+    width: 150px;
+    height: 150px;
+}
+
+.double_picture_note{
+    font-size: 25px;
+    line-height: 50px;
+    padding-top: 22px;
+}
+
+.double_picture_note_span{
+    font-size: 90px;
+}
+
+.double_picture_img{
+    width: 100px;
+    height: 100px;
+    z-index:3;
+}
+
+.double_picture_1{
+    background-image: url('../img/icons/fahrzeug-steckdose.svg');
+    position: relative;
+    top: 30px;
+    left: 50px;
+}
+
+.double_picture_2{
+    position: relative;
+    top: 30px;
+    left: 300px;
+    width: 300px;
+}
+
+.double_picture_2::after{
+    content: "";
+    background: url('../img/icons/fahrzeug-tacho.svg');
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-size: contain;
+   background-repeat: no-repeat;
+
+}
+
+//slider
+.slider_inside{
+    margin: 20vh 0 0 10vw;
+    width: 500px;
+}
+
+.mystyle{
+    height: 100vh !important;
+}
+
+// footer
+.margin_right{
+    margin-right: 10px;
+}
+
+.footer{
+    width: 100vw;
+    align-items: space-evenly;
+    color: $magenta-color;
+}
+
+.footer_item{
+    padding: 1rem;
+    width: 100%;
+}
+
+.footer_item>*{
+    margin-bottom: 1rem;
+}
