@@ -46,9 +46,9 @@
 
     <!-- fixed-top -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav">
-      <div class="container-fluid">
+      <div class="container-fluid custom_nav_container">
         <!-- logo here -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand custom_navbar_brand" href="#">
           <img
             src="./assets/img/logos/logo.svg"
             alt="app store logo"
@@ -57,7 +57,7 @@
           />
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler custom_navbar_toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -65,32 +65,32 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"> </span>
+          <span class="navbar-toggler-icon custom_navbar-toggler-icon"> </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse custom_open_menue" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+            <li class="nav-item custom_nav_item">
+              <a class="nav-link custom_nav_link active" aria-current="page" href="#"
                 >JETZT NEU</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+            <li class="nav-item custom_nav_item">
+              <a class="nav-link custom_nav_link active" aria-current="page" href="#"
                 >TICKETS</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+            <li class="nav-item custom_nav_item">
+              <a class="nav-link custom_nav_link active" aria-current="page" href="#"
                 >FAHRZEUGE</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+            <li class="nav-item custom_nav_item">
+              <a class="nav-link custom_nav_link active" aria-current="page" href="#"
                 >FREIZEITTIPPS</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+            <li class="nav-item custom_nav_item">
+              <a class="nav-link custom_nav_link active" aria-current="page" href="#"
                 >KONTAKT</a
               >
             </li>
@@ -113,7 +113,28 @@
         </div>
       </div>
       <!-- container 2 video start -->
+      <div class="container_2 flex">
         
+        <div class="container_large_inside">
+          <!-- Rakete fehlt -->
+          <!-- <div> -->
+            <img class="container_large_icon" src="./assets/img/icons/zauberstab-icon.svg" height:/>
+
+            <h1 class="container_large_header">jetzt Neu: ohne umsteigen nach maastricht</h1>
+            <p>
+              Endlich ist es so weit: Ab Fahrplanwechsel am 9. Dezember 2018 gibt 
+              es wieder eine attraktive Direktverbindung zwischen Aachen und 
+              Maastricht. Mit dem neuen RE 18 
+              von Arriva kommen Sie bequem und 
+              umsteigefrei nach Valkenburg und 
+              Maastricht
+            </p>
+          <!-- </div> -->
+        </div>
+        <video playsinline autoplay loop muted poster="./assets/img/train-poster.png" id="bgvid" class="background_video">
+          <source src="./assets/video/iStock-900100936_x264.mp4" type="video/mp4">
+        </video>
+      </div>
       <!-- container 3 start -->
       <div class="container_3 flex">
         <div class="container_large_inside">
@@ -137,6 +158,8 @@
       </div>
       <!-- container 4 start -->
       <div class="container_4 flex">
+        <!-- needed for grid -->
+        <div></div>
         <div class="container_large_inside">
           <!-- Rakete fehlt -->
           <div>
@@ -290,10 +313,10 @@
       </div>
       <!-- container 7 -->
       <div class="container_7">
-        <div id="carouselExampleIndicators" class="carousel slide  my_slyder_style">
+        <div id="carousel2" class="carousel slide my_slyder_style">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="slider_button_color active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" class="slider_button_color" aria-label="Slide 2"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -311,40 +334,43 @@
                     und Orten wie dem Vrijthof. Das Ablaufen 
                     der verschiedenen Routen nimmt ca. 1,5 
                     bis 2 Stunden in Anspruch. Welche Sehenswürdigkeiten sie dabei wohl sonst 
-                    noch entdecken?
+                    noch entdecken?<br/>
                     <a href="https://www.holland.com"><b>www.holland.com</b></a> 
                   </p>
                 </div>
               </div>
             </div>
             <div class="carousel-item">
-              <div class="container_large_inside my_slider_inside">
+              <div class="container_large_inside my_slider_inside_left">
                 <div>
-                  <img class="container_large_icon" src="./assets/img/icons/bag-icon.svg" height:/>
+                  <img class="container_large_icon" src="./assets/img/icons/walk-icon.svg" height:/>
       
-                  <h1 class="container_large_header">Die andere Seite -- Wyck 2</h1>
+                  <h1 class="container_large_header">Stadtrundgänge 2</h1>
                   <p>
-                    Einmal neue Geschäfte und Cafés abseits des 
-                    Touristentrubels entdecken? Das geht vor allem 
-                    auf der „anderen Seite“ der Maas. Der bei Touristen unbekanntere Stadtteil Wyck erstreckt sich 
-                    vom Bahnhof bis zur Maas. Hier finden Sie rund 
-                    um die Wycker Brug- und Grachtstraat nicht nur 
-                    viele Einheimische, sondern auch kleinere Galerien oder stilvoll eingerichtete Szene-Restaurants. 
-                    Schlendern Sie einfach drauflos und verlieben sich von ganz allein in dieses Viertel.
+                    Die Stadt auf eigene Faust erkunden – 
+                    das ist möglich mit Broschüren der 
+                    örtlichen Fremdenverkehrszentrale. 
+                    Anhand detaillierter Streckenbeschreibungen tauchen Sie ein in Maastrichts 
+                    Geschichte. Erzählt wird sie unter anderem von den historischen Stadtmauern 
+                    und Orten wie dem Vrijthof. Das Ablaufen 
+                    der verschiedenen Routen nimmt ca. 1,5 
+                    bis 2 Stunden in Anspruch. Welche Sehenswürdigkeiten sie dabei wohl sonst 
+                    noch entdecken?<br/>
+                    <a href="https://www.holland.com"><b>www.holland.com</b></a> 
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-        </div>
+        </div>'
       </div>
       <!-- container 8 -->
       <div class="container_8">
@@ -398,7 +424,7 @@
           <!-- Stack overflow -->
           <i class="margin_right fa-xs fab fa-stack-overflow"></i>
         </div>
-        <p>Impressum 1</p>
+        <p><small>Impressum | Datenschutz | &#169; Aachener Verkehrsverbund GmbH 2018</small></p>
       </div>
       <div class="footer_item">
         <p>Lorem Ipsum</p>
@@ -407,15 +433,15 @@
             class="margin_right"
             src="./assets//img/logos/google_play_logo.svg"
             alt="google play store logo"
-            height="50px"
-            width="50px"
+            height="100px"
+            width="100px"
           />
           <img
             class="flex"
             src="./assets//img/logos/app_store_logo.svg"
             alt="app play store logo"
-            height="50px"
-            width="50px"
+            height="100px"
+            width="100px"
           />
         </div>
       </div>

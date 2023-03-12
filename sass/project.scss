@@ -7,7 +7,7 @@
 // vendor & variables
 $color_white: rgb(255,255,255);
 $color_yellow: rgb(255, 239, 0);
-$color_magenta: rgb(183, 0, 115);
+$color_magenta: #b70073;
 $color_blue: rgb(94, 119, 182);
 $color_black: rgb(67, 67, 67);
 
@@ -48,7 +48,7 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
     @include backgroung_image_position;
     @include flex_centered;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 460px;
 } 
 
 .container_large_inside {
@@ -70,18 +70,14 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
 // basics
 
 body{
-    min-width: 450px;
+    min-width: 460px;
 }
+
 
 .center{
     margin: 0 auto;
 }
 
-// header nav
-.custom-nav{
-    width: 100vw;
-    padding-inline: 1rem;
-}
 
 //main
 
@@ -104,6 +100,50 @@ body{
 .container_1_footer{
     font-size: $font_size_small;
     color: $color_yellow;
+}
+
+.container_2{
+    @extend .container_basic;
+    display: block;
+    position: relative;
+    color: $color_magenta;
+
+    .container_large_inside{
+        position: absolute;
+        top: 15%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+
+        p{
+            color: $color_white;
+        }
+    }
+}
+
+@include media-breakpoint-up(md){
+
+    .container_2{
+    
+        .container_large_inside{
+            top: 30%;
+        }
+    }
+}
+
+
+.background_video{
+    object-fit: cover;
+    border: none;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    z-index: -1;
 }
 
 .container_3 {
@@ -130,8 +170,7 @@ body{
     color: $color_magenta; 
 }
 
-// only works for big screen in the moment
-// use grid
+
 .container_4_background_image{
     z-index: 0;
     opacity: 50%;
@@ -156,7 +195,8 @@ body{
 
 .container_5{
     @extend .container_basic;
-    max-height: 100vh;
+    // height: min-content;
+    height: 900px;
     flex-direction: column;
     justify-content: start;
     background-color: $color_magenta;
@@ -213,6 +253,7 @@ body{
 .bullet_points{
     min-width: 1000px;
     max-height: 60vh;
+    
 }
 
 .double_picture{
@@ -372,7 +413,7 @@ body{
 @include media-breakpoint-down(lg){
 
     .container_5{
-        max-height: 130vh;
+        // max-height: 130vh;
     }
 
     .container_5::before{
@@ -385,7 +426,7 @@ body{
     }
 
     .double_picture_1{
-        left: 0;
+        left: 26px;
         top: 0px;
     }
 
@@ -400,13 +441,13 @@ body{
     }
 
     .double_picture_4{
-        left: 0;
-        top: 70px;
+        left: 37px;
+        top: 51px;
     }
 
     .double_picture_5{
-        left: 300px;
-        top: -125px;
+        left: 282px;
+        top: -165px;
     }
 
     .double_picture_6{
@@ -418,7 +459,7 @@ body{
 @include media-breakpoint-down(sm){
 
     .container_5{
-        max-height: 149vh;
+        // max-height: 149vh;
     }
 
     .container_5::before{
@@ -431,6 +472,7 @@ body{
     .bullet_points{
         min-width: 300px;
         min-height: 1080px;
+        height: 800px;
     }
 
     .double_picture_1{
@@ -492,6 +534,9 @@ body{
     left: 50vw;
 }
 
+.slider_button_color{
+    background-color: $color_magenta !important;
+}
 
 @include media-breakpoint-down(lg){
     
@@ -516,21 +561,98 @@ body{
 }
 
 .footer{
-    width: 100vw;
     display: flex;
-    align-items: space-evenly;
+    justify-content: center; 
+    gap: 2rem;
     color: $color_magenta;
 }
 
 .footer_item{
     padding: 1rem;
-    width: 100%;
+    width: 40vw;
 }
 
 .footer_item>*{
+    margin: 0 auto;
     margin-bottom: 1rem;
 }
 
 .footer_item>*>*{
     cursor: pointer;
+}
+
+// header nav
+.custom-nav{
+    width: 100%;
+    padding-inline: 1rem;
+}
+
+.custom_nav_container{
+    width: 80vw;
+}
+
+.custom_navbar_brand{
+    margin-right: 7rem;
+}
+
+.custom_navbar_toggler,
+.custom_navbar_toggler:hover,
+.custom_navbar_toggler:active{
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon{
+    background-image: url("../assets/img/icons/menu-icon.svg") !important;
+}
+
+.custom_open_menue:before{
+    content: '';
+    position: absolute;
+    background-color: $color_magenta;
+    left: 0;
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.custom_nav_link{
+    color: $color_white !important;
+    position: relative;
+    z-index: 6;
+    font-weight: 600;
+    line-height: 17px;
+    width: fit-content;
+}
+
+.custom_nav_link:hover,
+.custom_nav_link:active{
+    color: $color_yellow !important;
+    border-bottom: 4px solid $color_white;
+}
+
+.custom_nav_item{
+    height: 40px;
+}
+
+@include media-breakpoint-up(lg){
+
+    .custom_nav_item{
+        height: 20px;
+    }
+    
+    .custom_nav_link{
+        color: $color_black !important;
+    }
+
+    .custom_open_menue:before{
+        background-color: rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity)) !important;
+    }
+
+    .custom_nav_link:hover,
+    .custom_nav_link:active{
+        color: $color_magenta !important;
+        border-bottom: 4px solid $color_magenta;
+    }
 }
