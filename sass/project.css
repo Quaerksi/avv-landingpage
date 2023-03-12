@@ -12674,7 +12674,7 @@ body {
 }
 
 .container_5 {
-  height: 915px;
+  height: 900px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -12887,7 +12887,7 @@ body {
 
 @media (max-width: 991.98px) {
   .container_5 {
-    max-height: 950px;
+    height: 900px;
   }
   .container_5::before {
     margin-top: 68vh;
@@ -12924,7 +12924,7 @@ body {
 
 @media (max-width: 575.98px) {
   .container_5 {
-    max-height: 1300px;
+    height: 1300px;
   }
   .container_5::before {
     height: 600px;
