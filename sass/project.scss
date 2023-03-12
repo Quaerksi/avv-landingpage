@@ -48,7 +48,6 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
     @include backgroung_image_position;
     @include flex_centered;
     min-height: 100vh;
-    height: min-content;
     min-width: 460px;
     padding-block: 1.5rem;
 } 
@@ -124,8 +123,9 @@ body{
     padding: 0;
 
     .container_large_inside{
+        
         position: absolute;
-        top: 30%;
+        top: 11%;
         left: 0;
         right: 0;
         bottom: 0;
@@ -142,7 +142,7 @@ body{
     .container_2{
     
         .container_large_inside{
-
+           
             top: 5%;
         }
     }
