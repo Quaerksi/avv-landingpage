@@ -48,7 +48,9 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
     @include backgroung_image_position;
     @include flex_centered;
     min-height: 100vh;
+    height: min-content;
     min-width: 460px;
+    padding-block: 1.5rem;
 } 
 
 .container_large_inside {
@@ -66,6 +68,18 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
     font-weight: 900;
     font-family: $fontFamilyHeadings;
 }
+
+@include media-breakpoint-down(md){
+    
+    .container_large_inside{
+        font-size: 10px;
+    }
+
+    .container_large_header{
+        font-size: 2rem;
+    }
+}
+
 
 // basics
 
@@ -107,10 +121,11 @@ body{
     display: block;
     position: relative;
     color: $color_magenta;
+    padding: 0;
 
     .container_large_inside{
         position: absolute;
-        top: 15%;
+        top: 30%;
         left: 0;
         right: 0;
         bottom: 0;
@@ -122,12 +137,13 @@ body{
     }
 }
 
-@include media-breakpoint-up(md){
+@include media-breakpoint-down(md){
 
     .container_2{
     
         .container_large_inside{
-            top: 30%;
+
+            top: 5%;
         }
     }
 }
@@ -137,13 +153,28 @@ body{
     object-fit: cover;
     border: none;
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     top: 0;
     left: 0;
     bottom:0;
     right: 0;
     z-index: -1;
+}
+
+@include media-breakpoint-down(md){
+    
+    .background_video{
+        object-fit: cover;
+        border: none;
+        width: 100%;
+        height: 400px;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        bottom:0;
+        right: 0;
+        z-index: -1;
+    }
 }
 
 .container_3 {
@@ -196,7 +227,7 @@ body{
 .container_5{
     @extend .container_basic;
     // height: min-content;
-    height: 900px;
+    height: 1200px;
     flex-direction: column;
     justify-content: start;
     background-color: $color_magenta;
@@ -413,7 +444,7 @@ body{
 @include media-breakpoint-down(lg){
 
     .container_5{
-        // max-height: 130vh;
+        max-height: 950px;
     }
 
     .container_5::before{
@@ -459,7 +490,7 @@ body{
 @include media-breakpoint-down(sm){
 
     .container_5{
-        // max-height: 149vh;
+        max-height:1300px;
     }
 
     .container_5::before{
@@ -512,7 +543,6 @@ body{
     position: relative;
     top: 50%;
     width: 900vw;
-    height: 100vh !important;
 }
 
 .carousel-inner, 
@@ -542,7 +572,7 @@ body{
     
     .my_slider_inside,
     .my_slider_inside_left{
-        top: 25%;
+        top: 5%;
         margin: 0 auto;
         max-width: 350px;
         left: 0;
@@ -583,6 +613,7 @@ body{
 
 // header nav
 .custom-nav{
+    min-width: 460px;
     width: 100%;
     padding-inline: 1rem;
 }
