@@ -48,6 +48,7 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
     @include backgroung_image_position;
     @include flex_centered;
     min-height: 100vh;
+    height: min-content;
     min-width: 460px;
     padding-block: 1.5rem;
 } 
@@ -69,6 +70,10 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
 }
 
 @include media-breakpoint-down(md){
+
+    .container_basic{
+        min-height: 0;
+    }
     
     .container_large_inside{
         font-size: 10px;
@@ -78,6 +83,8 @@ $fontFamilyHeadings: 'Bebas Neue', cursive;
         font-size: 2rem;
     }
 }
+
+
 
 
 // basics
@@ -120,12 +127,14 @@ body{
     display: block;
     position: relative;
     color: $color_magenta;
-    padding: 0;
+    padding-block: 0;
+    height: max-content;
+    min-height: 0;
+    
 
     .container_large_inside{
-        
         position: absolute;
-        top: 11%;
+        top: 1.2rem;
         left: 0;
         right: 0;
         bottom: 0;
@@ -137,22 +146,11 @@ body{
     }
 }
 
-@include media-breakpoint-down(md){
-
-    .container_2{
-    
-        .container_large_inside{
-           
-            top: 5%;
-        }
-    }
-}
-
-
 .background_video{
-    object-fit: cover;
+    object-fit: contain;
     border: none;
     width: 100%;
+    height: 100%;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -162,7 +160,19 @@ body{
 }
 
 @include media-breakpoint-down(md){
-    
+
+    .container_2{
+        min-height: 0px;
+        min-width: 460px;
+        overflow:hidden;
+
+
+        .container_large_inside{
+            top: 4rem;
+            min-width: 231px;
+        }
+    }
+
     .background_video{
         object-fit: cover;
         border: none;
@@ -174,6 +184,16 @@ body{
         bottom:0;
         right: 0;
         z-index: -1;
+    }
+}
+
+@include media-breakpoint-up(lg){
+
+    .container_2{
+
+        .container_large_inside{
+            top: 12rem;
+        }
     }
 }
 
