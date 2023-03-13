@@ -4398,6 +4398,7 @@ fieldset:disabled .btn {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
+  color: var(--bs-navbar-color);
   background-color: transparent;
   border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
   border-radius: var(--bs-navbar-toggler-border-radius);
@@ -12982,9 +12983,9 @@ body {
 
 .my_slyder_style {
   position: relative;
-  top: 50%;
+  top: 1rem;
   width: 900vw;
-  min-height: 530px;
+  min-height: 600px;
 }
 
 .carousel-inner,
@@ -13095,7 +13096,6 @@ body {
 
 .navbar-toggler {
   color: #b70073;
-  color: none;
 }
 
 .custom_navbar_toggler,

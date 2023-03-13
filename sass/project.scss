@@ -559,9 +559,9 @@ body{
 
 .my_slyder_style{
     position: relative;
-    top: 50%;
+    top: 1rem;
     width: 900vw;
-    min-height: 530px;
+    min-height: 600px;
 }
 
 .carousel-inner, 
@@ -681,7 +681,6 @@ body{
 // override
 .navbar-toggler{
     color: $color_magenta;
-    color: none;
 }
 
 .custom_navbar_toggler,
