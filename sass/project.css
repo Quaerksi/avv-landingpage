@@ -12706,7 +12706,7 @@ body {
 }
 
 .container_5 .container_large_inside {
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 .container_5::before {
@@ -12749,6 +12749,7 @@ body {
 .bullet_points {
   min-width: 1000px;
   max-height: 60vh;
+  margin-top: 1.7rem;
 }
 
 .double_picture, .double_picture_1, .double_picture_2, .double_picture_3, .double_picture_4, .double_picture_5, .double_picture_6 {
@@ -12904,7 +12905,7 @@ body {
 
 @media (max-width: 991.98px) {
   .container_5 {
-    height: 900px;
+    height: 941px;
   }
   .container_5::before {
     margin-top: 68vh;
@@ -12914,7 +12915,7 @@ body {
     min-width: 576px;
   }
   .double_picture_1 {
-    left: 26px;
+    left: -58px;
     top: 0px;
   }
   .double_picture_2 {
@@ -12926,22 +12927,22 @@ body {
     top: -129px;
   }
   .double_picture_4 {
-    left: 37px;
+    left: -50px;
     top: 51px;
   }
   .double_picture_5 {
     left: 282px;
-    top: -165px;
+    top: -83px;
   }
   .double_picture_6 {
-    left: 407px;
-    top: -384px;
+    left: 494px;
+    top: -347px;
   }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .container_5 {
-    height: 1300px;
+    height: 1224px;
   }
   .container_5::before {
     height: 600px;
