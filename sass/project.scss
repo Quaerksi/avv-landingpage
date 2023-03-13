@@ -3,7 +3,6 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 
-
 // vendor & variables
 $color_white: rgb(255,255,255);
 $color_yellow: rgb(255, 239, 0);
@@ -679,11 +678,19 @@ body{
     margin-right: 7rem;
 }
 
+// override
+.navbar-toggler{
+    color: $color_magenta;
+    color: none;
+}
+
 .custom_navbar_toggler,
 .custom_navbar_toggler:hover,
 .custom_navbar_toggler:active{
-    border: none;
-    outline: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+    color: none !important;
 }
 
 .navbar-toggler-icon{
