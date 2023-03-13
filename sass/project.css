@@ -12984,24 +12984,25 @@ body {
   position: relative;
   top: 50%;
   width: 900vw;
+  min-height: 530px;
 }
 
 .carousel-inner,
 .carousel-item {
-  height: 100%;
+  height: 500px;
 }
 
 .my_slider_inside {
   margin-left: 10vw;
-  max-width: 500px;
+  max-width: 450px;
   position: relative;
-  top: 30%;
+  top: 4rem;
 }
 
 .my_slider_inside_left {
-  max-width: 400px;
+  max-width: 350px;
   position: relative;
-  top: 30%;
+  top: 6rem;
   left: 50vw;
 }
 
@@ -13010,16 +13011,40 @@ body {
 }
 
 @media (max-width: 991.98px) {
+  .my_slyder_style {
+    min-height: 465px;
+  }
   .my_slider_inside,
   .my_slider_inside_left {
-    top: 5%;
+    top: 2.5rem;
     margin: 0 auto;
     max-width: 350px;
     left: 0;
   }
+  .carousel-inner,
+  .carousel-item {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .my_slyder_style {
+    min-height: 350px;
+  }
+  .my_slider_inside,
+  .my_slider_inside_left {
+    top: 1.5rem;
+  }
+  .carousel-inner,
+  .carousel-item {
+    height: 270px;
+  }
 }
 
 @media (min-width: 1400px) {
+  .my_slyder_style {
+    min-height: 700px;
+  }
   .my_slider_inside_left {
     left: 61vw;
   }
